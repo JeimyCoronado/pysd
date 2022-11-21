@@ -1,0 +1,102 @@
+{UTF-8}
+combustible de bus= INTEG (
+	llenado de combustible-consumo de combustible,
+		50)
+	~	
+	~		|
+
+consumo de combustible=
+	combustible de bus*tasa de consumo
+	~	
+	~		|
+
+llenado de combustible=
+	IF THEN ELSE(combustible de bus<=120, RAMP(10, 1, 10), 0)
+	~	
+	~		|
+
+tasa de consumo=
+	0
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 10
+	~	Minute
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Minute
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Minute [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Minute [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+10,1,combustible de bus,332,224,43,19,3,131,0,0,0,0,0,0,0,0,0,0,0,0
+12,2,0,193,60,92,20,8,135,0,18,-1,0,0,0,-1--1--1,0-0-0,|0|B|255-0-0,0,0,0,0,0,0
+RAMP: EJEMPLO 2
+12,3,48,115,221,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,5,7,1,4,0,0,22,0,0,0,-1--1--1,,1|(251,221)|
+1,6,7,3,100,0,0,22,0,0,0,-1--1--1,,1|(163,221)|
+11,7,0,207,221,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,8,llenado de combustible,207,248,41,19,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,9,48,534,225,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,11,13,9,4,0,0,22,0,0,0,-1--1--1,,1|(480,225)|
+1,12,13,1,100,0,0,22,0,0,0,-1--1--1,,1|(399,225)|
+11,13,0,430,225,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,14,consumo de combustible,430,252,41,19,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,15,tasa de consumo,449,117,56,11,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+1,16,15,13,0,0,0,0,0,64,0,-1--1--1,,1|(440,166)|
+1,17,1,13,1,0,0,0,0,64,0,-1--1--1,,1|(381,192)|
+1,18,1,7,1,0,0,0,0,64,0,-1--1--1,,1|(263,177)|
+///---\\\
+:L<%^E!@
+1:Current.vdfx
+9:Current
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:0,
+34:0,
+42:1
+72:0
+73:0
+4:Time
+5:llenado de combustible
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:6
+41:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+24:0
+25:10
+26:10
+75:
+43:
