@@ -1,0 +1,109 @@
+{UTF-8}
+producto= INTEG (
+	producto fabricado-producto vendido,
+		10)
+	~	
+	~		|
+
+producto fabricado=
+	IF THEN ELSE(producto<=100 , DELAY1(producto*tasa de fabricacion, 2 ), 0 )
+	~	
+	~		|
+
+producto vendido=
+	producto*tasa de venta
+	~	
+	~		|
+
+tasa de fabricacion=
+	0.1
+	~	
+	~		|
+
+tasa de venta=
+	0
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 30
+	~	Minute
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Minute
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Minute [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Minute [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+12,1,0,151,52,46,19,8,7,0,18,-1,0,0,0,-1--1--1,0-0-0,|0|B|255-0-0,0,0,0,0,0,0
+DELAY: EJEMPLO 2
+10,2,producto,343,222,40,20,3,3,0,0,0,0,0,0,0,0,0,0,0,0
+12,3,48,159,216,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,5,7,2,4,0,0,22,0,0,0,-1--1--1,,1|(272,216)|
+1,6,7,3,100,0,0,22,0,0,0,-1--1--1,,1|(199,216)|
+11,7,0,236,216,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,8,producto fabricado,236,243,33,19,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,9,48,549,220,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,11,13,9,4,0,0,22,0,0,0,-1--1--1,,1|(499,218)|
+1,12,13,2,100,0,0,22,0,0,0,-1--1--1,,1|(415,218)|
+11,13,0,454,218,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,14,producto vendido,454,237,59,11,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,15,tasa de fabricacion,177,105,39,19,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+10,16,tasa de venta,470,87,45,11,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+1,18,16,13,0,0,0,0,0,64,0,-1--1--1,,1|(462,148)|
+1,19,2,13,1,0,0,0,0,64,0,-1--1--1,,1|(394,179)|
+1,20,2,7,1,0,0,0,0,64,0,-1--1--1,,1|(286,171)|
+1,21,15,7,0,0,0,0,0,64,0,-1--1--1,,1|(206,160)|
+///---\\\
+:L<%^E!@
+1:C:\Users\Black\PycharmProjects\pysd\Current
+9:Current
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:0,
+34:0,
+42:1
+72:0
+73:0
+4:Time
+5:producto
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:6
+41:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+24:0
+25:30
+26:30
+75:
+43:
