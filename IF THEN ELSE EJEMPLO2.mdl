@@ -1,0 +1,108 @@
+{UTF-8}
+entrada de pasajeros=
+	IF THEN ELSE(pasajeros en bus*(1+tasa de entrada)>40, IF THEN ELSE(pasajeros en bus>=\
+		40, 0, 40-pasajeros en bus), pasajeros en bus*tasa de entrada)
+	~	
+	~		|
+
+pasajeros en bus= INTEG (
+	entrada de pasajeros-salida de pasajeros,
+		20)
+	~	
+	~		|
+
+salida de pasajeros=
+	pasajeros en bus*tasa de salida
+	~	
+	~		|
+
+tasa de entrada=
+	0.2
+	~	
+	~		|
+
+tasa de salida=
+	0.1
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 30
+	~	Day
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Day
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Day [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Day [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$192-192-192,0,Times New Roman|12||0-0-0|0-0-0|0-0-255|-1--1--1|-1--1--1|96,96,100,0
+12,1,0,254,55,121,19,8,135,0,18,-1,0,0,0,-1--1--1,0-0-0,|0|B|255-0-0,0,0,0,0,0,0
+IF THEN ELSE: EJEMPLO 2
+10,3,pasajeros en bus,459,209,40,20,3,3,0,0,0,0,0,0,0,0,0,0,0,0
+12,4,48,204,205,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,6,8,3,4,0,0,22,0,0,0,-1--1--1,,1|(370,205)|
+1,7,8,4,100,0,0,22,0,0,0,-1--1--1,,1|(262,205)|
+11,8,0,316,205,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,9,entrada de pasajeros,316,232,37,19,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,10,48,675,210,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,12,14,10,4,0,0,22,0,0,0,-1--1--1,,1|(626,210)|
+1,13,14,3,100,0,0,22,0,0,0,-1--1--1,,1|(537,210)|
+11,14,0,582,210,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,15,salida de pasajeros,582,237,33,19,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,16,tasa de salida,614,104,46,11,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+10,17,tasa de entrada,218,101,52,11,8,3,0,0,0,0,0,0,0,0,0,0,0,0
+1,18,17,8,0,0,0,0,0,64,0,-1--1--1,,1|(264,150)|
+1,19,16,14,0,0,0,0,0,64,0,-1--1--1,,1|(599,152)|
+1,20,3,14,1,0,0,0,0,64,0,-1--1--1,,1|(521,168)|
+1,21,3,8,1,0,0,0,0,64,0,-1--1--1,,1|(378,156)|
+///---\\\
+:L<%^E!@
+9:Current
+23:0
+15:0,0,0,0,0,0
+19:100,0
+27:0,
+34:0,
+42:1
+72:0
+73:0
+5:entrada de pasajeros
+35:Date
+36:YYYY-MM-DD
+37:2000
+38:1
+39:1
+40:4
+41:0
+76:0
+77:0
+78:0
+79:0
+80:0
+81:0
+24:0
+25:0
+26:0
+75:
+43:
